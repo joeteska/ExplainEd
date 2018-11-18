@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Instagram-->
+        <scene sceneID="RPQ-00-qwG">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b1h-af-Uio" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="WYt-rr-EmN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yud-67-ii0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="purple_background" translatesAutoresizingMaskIntoConstraints="NO" id="LiU-Q8-YGk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="White_Background" translatesAutoresizingMaskIntoConstraints="NO" id="ecv-h3-QY1">
+                                <rect key="frame" x="23" y="52" width="328" height="760"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqu-9v-vVY">
+                                <rect key="frame" x="44" y="243" width="287" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                                <state key="normal" image="about_button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWr-K4-I4d">
+                                <rect key="frame" x="44" y="399" width="287" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                                <state key="normal" image="user_Interface"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUy-Bi-cWT">
+                                <rect key="frame" x="44" y="554" width="287" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                                <state key="normal" image="business_button"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="instagram_title" translatesAutoresizingMaskIntoConstraints="NO" id="fnE-Gh-Lwl">
+                                <rect key="frame" x="33.332051043532147" y="79" width="307" height="118"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ysB-k1-31e"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Instagram" image="icons8-instagram-50" id="9tf-52-nmg"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-850" y="791"/>
+        </scene>
+        <!--Facebook-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="ExplainEd" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook_Background" translatesAutoresizingMaskIntoConstraints="NO" id="2vD-GJ-hjF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="White_Background" translatesAutoresizingMaskIntoConstraints="NO" id="46d-ca-Dlb">
+                                <rect key="frame" x="23" y="52" width="328" height="760"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMb-2d-EsW">
+                                <rect key="frame" x="44" y="243" width="287" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="about_button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDD-DE-fJp">
+                                <rect key="frame" x="44" y="399" width="287" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="user_Interface"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lE-S0-qac">
+                                <rect key="frame" x="44" y="554" width="287" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="business_button"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Facebook_Title" translatesAutoresizingMaskIntoConstraints="NO" id="2vx-t9-7ao">
+                                <rect key="frame" x="34" y="79" width="307" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2vD-GJ-hjF" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="39x-XN-PSS"/>
+                            <constraint firstAttribute="bottom" secondItem="2vD-GJ-hjF" secondAttribute="bottom" id="4Y5-pI-hTP"/>
+                            <constraint firstItem="2vD-GJ-hjF" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="Toe-84-VhR"/>
+                            <constraint firstItem="2vD-GJ-hjF" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="dHs-jv-uec"/>
+                            <constraint firstItem="2vD-GJ-hjF" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="g9b-VE-gN5"/>
+                            <constraint firstItem="2vD-GJ-hjF" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="gc3-nY-GGs"/>
+                            <constraint firstAttribute="bottom" secondItem="2vD-GJ-hjF" secondAttribute="bottom" id="jcc-QK-UTe"/>
+                            <constraint firstItem="2vD-GJ-hjF" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="xr5-He-sL8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Facebook" image="icons8-facebook-50" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" id="Ks8-3j-i0a"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-2.3999999999999999" y="790.64039408866995"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="WYt-rr-EmN" kind="relationship" relationship="viewControllers" id="u8F-mT-uGo"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="Sex-Kx-XNM" kind="relationship" relationship="viewControllers" id="0Oh-R6-Ion"/>
+                        <segue destination="M9z-uV-l2a" kind="relationship" relationship="viewControllers" id="9Rb-Tb-YBh"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="9ZE-kO-nTa">
+            <objects>
+                <viewController id="M9z-uV-l2a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5sd-DP-UnD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ERH-Lk-jXp"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" image="icons8-about-50" id="ATx-Ab-i7Y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fiF-1O-6dF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713" y="0.0"/>
+        </scene>
+        <!--Snapchat-->
+        <scene sceneID="VbC-iE-aqt">
+            <objects>
+                <viewController id="Sex-Kx-XNM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Oy-Ag-7Qv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snap_background" translatesAutoresizingMaskIntoConstraints="NO" id="yYH-tC-Uyf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="White_Background" translatesAutoresizingMaskIntoConstraints="NO" id="gLB-wD-GTH">
+                                <rect key="frame" x="23" y="52" width="328" height="760"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ya4-TZ-Sa3">
+                                <rect key="frame" x="44" y="243" width="287" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="about_button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjH-r9-kge">
+                                <rect key="frame" x="44" y="399" width="287" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="user_Interface"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5q-IM-F5e">
+                                <rect key="frame" x="44" y="554" width="287" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="business_button"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snapchat_title" translatesAutoresizingMaskIntoConstraints="NO" id="eaY-Cy-zBJ">
+                                <rect key="frame" x="34" y="79" width="307" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wCS-63-cGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Snapchat" image="icons8-snapchat-50" id="8u7-9r-D2j"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xpT-ZE-GNU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="791"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Facebook_Background" width="843.75" height="1957.5"/>
+        <image name="Facebook_Title" width="661.5" height="269.25"/>
+        <image name="White_Background" width="747.75" height="1983.75"/>
+        <image name="about_button" width="608.25" height="249"/>
+        <image name="business_button" width="608.25" height="260.25"/>
+        <image name="icons8-about-50" width="37.5" height="37.5"/>
+        <image name="icons8-facebook-50" width="37.5" height="37.5"/>
+        <image name="icons8-instagram-50" width="37.5" height="37.5"/>
+        <image name="icons8-snapchat-50" width="37.5" height="37.5"/>
+        <image name="instagram_title" width="661.5" height="269.25"/>
+        <image name="purple_background" width="843.75" height="1957.5"/>
+        <image name="snap_background" width="843.75" height="1957.5"/>
+        <image name="snapchat_title" width="661.5" height="269.25"/>
+        <image name="user_Interface" width="608.25" height="249.75"/>
+    </resources>
+</document>
