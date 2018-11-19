@@ -46,8 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         registerForPushNotifications()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "Back")!.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), resizingMode: .stretch), for: .default)
-        UINavigationBar.appearance().isTranslucent = false
+//        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "Back")!.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), resizingMode: .stretch), for: .default)
+//        UINavigationBar.appearance().isTranslucent = false
         
         UIApplication.shared.statusBarStyle = .lightContent
         

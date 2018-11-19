@@ -13,7 +13,6 @@
         <!--Instagram-->
         <scene sceneID="RPQ-00-qwG">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b1h-af-Uio" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="WYt-rr-EmN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yud-67-ii0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -43,7 +42,7 @@
                                 <state key="normal" image="business_button"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="instagram_title" translatesAutoresizingMaskIntoConstraints="NO" id="fnE-Gh-Lwl">
-                                <rect key="frame" x="33.332051043532147" y="79" width="307" height="118"/>
+                                <rect key="frame" x="33" y="79" width="307" height="118"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </imageView>
@@ -53,13 +52,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Instagram" image="icons8-instagram-50" id="9tf-52-nmg"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b1h-af-Uio" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-850" y="791"/>
         </scene>
         <!--Facebook-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="ExplainEd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -108,14 +107,84 @@
                     <tabBarItem key="tabBarItem" title="Facebook" image="icons8-facebook-50" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" id="Ks8-3j-i0a"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2.3999999999999999" y="790.64039408866995"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="UbK-Ub-uPV">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="nUQ-Tj-CNI" customClass="LoginViewController" customModule="ExplainEd" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x7q-Na-tgH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="White_Background" translatesAutoresizingMaskIntoConstraints="NO" id="gw8-Rr-8aA">
+                                <rect key="frame" x="0.0" y="84" width="375" height="791"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHR-wt-EsX">
+                                <rect key="frame" x="100" y="580" width="175" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="nLN-R3-kp2"/>
+                                </constraints>
+                                <state key="normal" image="login-button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qr1-RA-EWf">
+                                <rect key="frame" x="49" y="446" width="275" height="30"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rDI-HE-w5g">
+                                <rect key="frame" x="49" y="507" width="275" height="30"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cube" translatesAutoresizingMaskIntoConstraints="NO" id="dZo-o8-idZ">
+                                <rect key="frame" x="100" y="195" width="175" height="203"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="203" id="0dV-aY-5yW"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98431372549019602" green="0.11764705882352941" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gw8-Rr-8aA" secondAttribute="bottom" constant="-63" id="7NG-i3-YLQ"/>
+                            <constraint firstItem="gw8-Rr-8aA" firstAttribute="centerX" secondItem="x7q-Na-tgH" secondAttribute="centerX" id="Aut-6N-FNC"/>
+                            <constraint firstItem="rDI-HE-w5g" firstAttribute="top" secondItem="qr1-RA-EWf" secondAttribute="bottom" constant="31" id="DJ2-wD-XAt"/>
+                            <constraint firstItem="NHR-wt-EsX" firstAttribute="top" secondItem="rDI-HE-w5g" secondAttribute="bottom" constant="43" id="I67-ZD-ONx"/>
+                            <constraint firstItem="dZo-o8-idZ" firstAttribute="trailing" secondItem="NHR-wt-EsX" secondAttribute="trailing" id="Rrk-1k-tAg"/>
+                            <constraint firstItem="qr1-RA-EWf" firstAttribute="trailing" secondItem="rDI-HE-w5g" secondAttribute="trailing" id="VgK-bC-3De"/>
+                            <constraint firstItem="gw8-Rr-8aA" firstAttribute="leading" secondItem="gTr-2V-cmR" secondAttribute="leading" id="Zva-kI-0qP"/>
+                            <constraint firstItem="dZo-o8-idZ" firstAttribute="top" secondItem="gTr-2V-cmR" secondAttribute="top" constant="151" id="c4j-sK-q28"/>
+                            <constraint firstItem="gw8-Rr-8aA" firstAttribute="top" secondItem="gTr-2V-cmR" secondAttribute="top" constant="40" id="e9a-ph-Qvw"/>
+                            <constraint firstItem="gTr-2V-cmR" firstAttribute="trailing" secondItem="qr1-RA-EWf" secondAttribute="trailing" constant="51" id="ekA-1x-s3A"/>
+                            <constraint firstItem="dZo-o8-idZ" firstAttribute="leading" secondItem="NHR-wt-EsX" secondAttribute="leading" id="u9S-Ak-APb"/>
+                            <constraint firstItem="qr1-RA-EWf" firstAttribute="leading" secondItem="gTr-2V-cmR" secondAttribute="leading" constant="49" id="vtW-Wr-W8M"/>
+                            <constraint firstItem="qr1-RA-EWf" firstAttribute="leading" secondItem="rDI-HE-w5g" secondAttribute="leading" id="vu3-bx-E0A"/>
+                            <constraint firstItem="dZo-o8-idZ" firstAttribute="leading" secondItem="gTr-2V-cmR" secondAttribute="leading" constant="100" id="wB6-JK-Mkh"/>
+                            <constraint firstItem="gTr-2V-cmR" firstAttribute="bottom" secondItem="NHR-wt-EsX" secondAttribute="bottom" constant="128" id="xu9-Po-wwO"/>
+                            <constraint firstItem="dZo-o8-idZ" firstAttribute="centerX" secondItem="gw8-Rr-8aA" secondAttribute="centerX" id="ydw-bP-SJu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gTr-2V-cmR"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="qr1-RA-EWf" id="pQ2-y2-2Y8"/>
+                        <outlet property="loginButton" destination="NHR-wt-EsX" id="BA0-ZV-3pB"/>
+                        <outlet property="passwordTextField" destination="rDI-HE-w5g" id="JxK-Qv-5mo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KeO-rU-o6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1047.2" y="0.0"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainViewController" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -129,6 +198,7 @@
                         <segue destination="M9z-uV-l2a" kind="relationship" relationship="viewControllers" id="9Rb-Tb-YBh"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
@@ -195,19 +265,21 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Facebook_Background" width="843.75" height="1957.5"/>
-        <image name="Facebook_Title" width="661.5" height="269.25"/>
-        <image name="White_Background" width="747.75" height="1983.75"/>
-        <image name="about_button" width="608.25" height="249"/>
-        <image name="business_button" width="608.25" height="260.25"/>
-        <image name="icons8-about-50" width="37.5" height="37.5"/>
-        <image name="icons8-facebook-50" width="37.5" height="37.5"/>
-        <image name="icons8-instagram-50" width="37.5" height="37.5"/>
-        <image name="icons8-snapchat-50" width="37.5" height="37.5"/>
-        <image name="instagram_title" width="661.5" height="269.25"/>
-        <image name="purple_background" width="843.75" height="1957.5"/>
-        <image name="snap_background" width="843.75" height="1957.5"/>
-        <image name="snapchat_title" width="661.5" height="269.25"/>
-        <image name="user_Interface" width="608.25" height="249.75"/>
+        <image name="Cube" width="173" height="200"/>
+        <image name="Facebook_Background" width="1125" height="2610"/>
+        <image name="Facebook_Title" width="441" height="179"/>
+        <image name="White_Background" width="997" height="2645"/>
+        <image name="about_button" width="811" height="332"/>
+        <image name="business_button" width="811" height="347"/>
+        <image name="icons8-about-50" width="25" height="25"/>
+        <image name="icons8-facebook-50" width="25" height="25"/>
+        <image name="icons8-instagram-50" width="25" height="25"/>
+        <image name="icons8-snapchat-50" width="25" height="25"/>
+        <image name="instagram_title" width="882" height="359"/>
+        <image name="login-button" width="270" height="110"/>
+        <image name="purple_background" width="1125" height="2610"/>
+        <image name="snap_background" width="1125" height="2610"/>
+        <image name="snapchat_title" width="882" height="359"/>
+        <image name="user_Interface" width="811" height="333"/>
     </resources>
 </document>
