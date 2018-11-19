@@ -21,8 +21,6 @@ import FBSDKLoginKit
 
 //GooglePlaces API Key: AIzaSyBgV8T9pC7FgnlM3TvlLbH80W7TXAKJK8w
 
-//Messenger ID
-let adminUID = "bNB1YgZOlCbLLBmMVqm8u9Xi52E3"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -60,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 FirebaseUser.observeUserProfile(user!.uid) { userProfile in
                     FirebaseUser.currentUserProfile = userProfile
                 }
-                let controller = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! UITabBarController
+                let controller = storyboard.instantiateViewController(withIdentifier: "InitialViewController") as! InitialViewController
                 self.window?.rootViewController = controller
                 self.window?.makeKeyAndVisible()
             } else {
@@ -68,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 FirebaseUser.currentUserProfile = nil
                 
                 // menu screen
-                let controller = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+                let controller = storyboard.instantiateViewController(withIdentifier: "InitialViewController") as! InitialViewController
                 self.window?.rootViewController = controller
                 self.window?.makeKeyAndVisible()
             }

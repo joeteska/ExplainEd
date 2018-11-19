@@ -12,21 +12,12 @@ import Firebase
 
 class AboutViewController: UIViewController{
     
-    let logoutButton: UIButton = {
-        let button = UIButton()
-        let size = CGSize(width: 30, height: 30)
-        
-        button.setImage(UIImage(named: "Signup"), for: .normal)
-        button.contentEdgeInsets = UIEdgeInsets(top: 600, left: 200, bottom: 10, right: 10)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.contentHorizontalAlignment = .center
-        return button
-    }()
+    @IBOutlet var logoutButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        logoutButton.addTarget(self, action: #selector(handleSignOutButtonTapped), for: .touchUpInside)
+        logoutButton.addTarget(self, action: #selector(handleLogout), for: .touchUpInside)
         view.addSubview(logoutButton)
     }
     
@@ -35,9 +26,9 @@ class AboutViewController: UIViewController{
             do {
                 print("hey")
                 try Auth.auth().signOut()
-                let loginViewController = LoginViewController()
+                let loginViewController = InitialViewController()
                 let loginNavigationController = UINavigationController(rootViewController: loginViewController)
-                self.present(loginNavigationController, animated: true, completion: nil)
+                self.present(loginViewController, animated: true, completion: nil)
             } catch let err {
                 print("Failed to sign out with error", err)
                 ErrorAlert.showAlert(on: self, style: .alert, title: "Sign Out Error", message: err.localizedDescription)

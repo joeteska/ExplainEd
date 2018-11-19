@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var loginButton: UIButton!
     
     var activityView:UIActivityIndicatorView!
 
@@ -22,12 +22,22 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setLoginButton(enabled: false)
         loginButton.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
 
         activityView = UIActivityIndicatorView(style: .gray)
         activityView.color = UIColor.gray
         activityView.frame = CGRect(x: 0, y: 0, width: 50.0, height: 50.0)
         activityView.center = loginButton.center
+        
+        emailTextField.keyboardType = .emailAddress
+        emailTextField.delegate = self
+        
+        passwordTextField.delegate = self
+        
+        emailTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        
         view.addSubview(activityView)
 
     }
