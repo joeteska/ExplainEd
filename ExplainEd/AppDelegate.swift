@@ -7,40 +7,124 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseInstanceID
+import UserNotifications
+import FBSDKLoginKit
+
+//Global Color Themes
+//let primaryColor = Theme1.SECONDARY_COLOR1
+//let secondaryColor = Theme1.SECONDARY_COLOR1
+//let primary1 = Theme1.TERTIARY_COLOR
+//let secondary1 = Theme1.TERTIARY_COLOR
+
+
+//GooglePlaces API Key: AIzaSyBgV8T9pC7FgnlM3TvlLbH80W7TXAKJK8w
+
+//Messenger ID
+let adminUID = "bNB1YgZOlCbLLBmMVqm8u9Xi52E3"
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+    
     var window: UIWindow?
-
-
+    var enableAllOrientation = false
+    
+//    let chatsController = ChatsTableViewController()
+//    let contactsController = ContactsController()
+//    let settingsController = AccountSettingsController()
+    
+    var orientationLock = UIInterfaceOrientationMask.allButUpsideDown
+    
+    //Check to see if user is logged in. To login page if not, and main view if so.
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+//        chatsController.title = "Chats"
+        
+        //Configure Firebase
+        FirebaseApp.configure()
+        registerForPushNotifications()
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "Back")!.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), resizingMode: .stretch), for: .default)
+        UINavigationBar.appearance().isTranslucent = false
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        _ = Auth.auth().addStateDidChangeListener { auth, user in
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            if user != nil {
+                
+                FirebaseUser.observeUserProfile(user!.uid) { userProfile in
+                    FirebaseUser.currentUserProfile = userProfile
+                }
+                let controller = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! UITabBarController
+                self.window?.rootViewController = controller
+                self.window?.makeKeyAndVisible()
+            } else {
+                
+                FirebaseUser.currentUserProfile = nil
+                
+                // menu screen
+                let controller = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+                self.window?.rootViewController = controller
+                self.window?.makeKeyAndVisible()
+            }
+        }
+        
         return true
     }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        if (enableAllOrientation == true){
+            return UIInterfaceOrientationMask.allButUpsideDown
+        }
+        return UIInterfaceOrientationMask.portrait
     }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    //Open Facebook Login
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool{
+        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation:annotation)
     }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    
+    
+    func registerForPushNotifications() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+            (granted, error) in
+            print("Permission granted: \(granted)")
+            guard granted else { return }
+            self.getNotificationSettings()
+        }
     }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    func getNotificationSettings() {
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+            print("Notification settings: \(settings)")
+            guard settings.authorizationStatus == .authorized else { return }
+            DispatchQueue.main.async(execute: {
+                UIApplication.shared.registerForRemoteNotifications()
+            })
+        }
     }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
+    
+    func application(_ application: UIApplication,
+                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Failed to register: \(error.localizedDescription)")
     }
-
-
+    
+    //To handle push notifications
+    func application(_ application: UIApplication,
+                     didReceiveRemoteNotification notification: [AnyHashable : Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        if Auth.auth().canHandleNotification(notification) {
+            completionHandler(UIBackgroundFetchResult.noData)
+            return
+        }
+        // This notification is not auth related, developer should handle it.
+    }
 }
+
 
