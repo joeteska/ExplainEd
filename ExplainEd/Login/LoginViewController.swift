@@ -15,6 +15,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var loginButton: UIButton!
+    @IBOutlet var backButton: UIButton!
     
     var activityView:UIActivityIndicatorView!
 
@@ -37,6 +38,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         emailTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        backButton.addTarget(self, action: #selector(backpressed), for: .touchUpInside)
         
         view.addSubview(activityView)
 
@@ -66,6 +68,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         setLoginButton(enabled: formFilled)
     }
     
+    @objc func backpressed() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @objc func handleSignIn() {
         guard let email = emailTextField.text else { return }
         guard let pass = passwordTextField.text else { return }
@@ -79,7 +85,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 self.dismiss(animated: false, completion: nil)
             } else {
                 print("Error logging in: \(error!.localizedDescription)")
-                
                 self.resetForm()
             }
         }

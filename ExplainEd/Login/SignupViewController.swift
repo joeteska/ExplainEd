@@ -16,6 +16,7 @@ class  SignupViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var confirmPasswordTextField: UITextField!
     @IBOutlet var signupButton: UIButton!
+    @IBOutlet var backButton: UIButton!
     
     var activityView:UIActivityIndicatorView!
     
@@ -35,6 +36,9 @@ class  SignupViewController: UIViewController, UITextFieldDelegate{
         activityView.frame = CGRect(x: 0, y: 0, width: 50.0, height: 50.0)
         activityView.center = signupButton.center
         
+        
+        backButton.addTarget(self, action: #selector(backpressed), for: .touchUpInside)
+        
         view.addSubview(activityView)
         view.addSubview(signupButton)
         setSignupButton(enabled: false)
@@ -47,6 +51,10 @@ class  SignupViewController: UIViewController, UITextFieldDelegate{
         let confirmpassword = confirmPasswordTextField.text
         let formFilled = email != nil && email != "" && password != nil && password != "" && confirmpassword == password && password == confirmpassword
         setSignupButton(enabled: formFilled)
+    }
+    
+    @objc func backpressed() {
+        self.dismiss(animated: true, completion: nil)
     }
     
     func setSignupButton(enabled:Bool) {
