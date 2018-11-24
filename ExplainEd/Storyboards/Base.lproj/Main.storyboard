@@ -234,9 +234,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWe-aw-o5z">
-                                <rect key="frame" x="49" y="125" width="30" height="30"/>
-                                <state key="normal" title="&lt;"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWe-aw-o5z">
+                                <rect key="frame" x="35" y="130" width="33" height="33"/>
+                                <state key="normal" image="back_Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98431372549019602" green="0.11764705882352941" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -248,11 +248,11 @@
                             <constraint firstItem="dZo-o8-idZ" firstAttribute="trailing" secondItem="NHR-wt-EsX" secondAttribute="trailing" id="Rrk-1k-tAg"/>
                             <constraint firstItem="qr1-RA-EWf" firstAttribute="trailing" secondItem="rDI-HE-w5g" secondAttribute="trailing" id="VgK-bC-3De"/>
                             <constraint firstItem="gw8-Rr-8aA" firstAttribute="leading" secondItem="gTr-2V-cmR" secondAttribute="leading" id="Zva-kI-0qP"/>
-                            <constraint firstItem="EWe-aw-o5z" firstAttribute="leading" secondItem="qr1-RA-EWf" secondAttribute="leading" id="bbw-mU-USv"/>
+                            <constraint firstItem="EWe-aw-o5z" firstAttribute="leading" secondItem="qr1-RA-EWf" secondAttribute="leading" constant="-14" id="bbw-mU-USv"/>
                             <constraint firstItem="dZo-o8-idZ" firstAttribute="top" secondItem="gTr-2V-cmR" secondAttribute="top" constant="151" id="c4j-sK-q28"/>
                             <constraint firstItem="gw8-Rr-8aA" firstAttribute="top" secondItem="gTr-2V-cmR" secondAttribute="top" constant="40" id="e9a-ph-Qvw"/>
                             <constraint firstItem="gTr-2V-cmR" firstAttribute="trailing" secondItem="qr1-RA-EWf" secondAttribute="trailing" constant="51" id="ekA-1x-s3A"/>
-                            <constraint firstItem="EWe-aw-o5z" firstAttribute="top" secondItem="gTr-2V-cmR" secondAttribute="top" constant="81" id="tMh-UG-vRd"/>
+                            <constraint firstItem="EWe-aw-o5z" firstAttribute="top" secondItem="gTr-2V-cmR" secondAttribute="top" constant="86" id="tMh-UG-vRd"/>
                             <constraint firstItem="dZo-o8-idZ" firstAttribute="leading" secondItem="NHR-wt-EsX" secondAttribute="leading" id="u9S-Ak-APb"/>
                             <constraint firstItem="qr1-RA-EWf" firstAttribute="leading" secondItem="gTr-2V-cmR" secondAttribute="leading" constant="49" id="vtW-Wr-W8M"/>
                             <constraint firstItem="qr1-RA-EWf" firstAttribute="leading" secondItem="rDI-HE-w5g" secondAttribute="leading" id="vu3-bx-E0A"/>
@@ -314,10 +314,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZ9-6K-4Z1">
-                                <rect key="frame" x="47" y="121" width="30" height="30"/>
-                                <state key="normal" title="&lt;"/>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T3b-JD-bAv">
                                 <rect key="frame" x="51" y="491" width="275" height="30"/>
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -325,6 +321,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZ9-6K-4Z1">
+                                <rect key="frame" x="28" y="130" width="40" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="back_Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.13333333333333333" blue="0.22352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -341,10 +342,10 @@
                             <constraint firstItem="NEP-Yh-NPd" firstAttribute="top" secondItem="fvX-l7-hUe" secondAttribute="top" constant="40" id="RgX-Px-UNv"/>
                             <constraint firstItem="T3b-JD-bAv" firstAttribute="top" secondItem="x7S-7R-k36" secondAttribute="bottom" constant="31" id="SeS-lr-17Y"/>
                             <constraint firstItem="T3b-JD-bAv" firstAttribute="leading" secondItem="fvX-l7-hUe" secondAttribute="leading" constant="51" id="VTx-vx-Lqb"/>
-                            <constraint firstItem="YZ9-6K-4Z1" firstAttribute="top" secondItem="fvX-l7-hUe" secondAttribute="top" constant="77" id="rc3-UA-n5d"/>
+                            <constraint firstItem="YZ9-6K-4Z1" firstAttribute="top" secondItem="fvX-l7-hUe" secondAttribute="top" constant="86" id="rc3-UA-n5d"/>
                             <constraint firstItem="CHH-Bs-cAH" firstAttribute="top" secondItem="fvX-l7-hUe" secondAttribute="top" constant="135" id="sHa-m8-FE5"/>
                             <constraint firstItem="x7S-7R-k36" firstAttribute="trailing" secondItem="x7l-Af-0iS" secondAttribute="trailing" id="tLP-Rw-Ek8"/>
-                            <constraint firstItem="YZ9-6K-4Z1" firstAttribute="leading" secondItem="fvX-l7-hUe" secondAttribute="leading" constant="47" id="tuW-qO-95z"/>
+                            <constraint firstItem="YZ9-6K-4Z1" firstAttribute="leading" secondItem="fvX-l7-hUe" secondAttribute="leading" constant="28" id="tuW-qO-95z"/>
                             <constraint firstItem="fvX-l7-hUe" firstAttribute="trailing" secondItem="CHH-Bs-cAH" secondAttribute="trailing" constant="99" id="uDg-ei-AM7"/>
                             <constraint firstItem="T3b-JD-bAv" firstAttribute="centerX" secondItem="sSF-xz-52B" secondAttribute="centerX" id="xav-Ue-XO6"/>
                             <constraint firstItem="CHH-Bs-cAH" firstAttribute="leading" secondItem="fvX-l7-hUe" secondAttribute="leading" constant="101" id="zyS-rG-ytU"/>
@@ -467,6 +468,7 @@
         <image name="Signup" width="270" height="110"/>
         <image name="White_Background" width="997" height="2645"/>
         <image name="about_button" width="811" height="332"/>
+        <image name="back_Button" width="33" height="33"/>
         <image name="business_button" width="811" height="347"/>
         <image name="icons8-about-50" width="25" height="25"/>
         <image name="icons8-facebook-50" width="25" height="25"/>
