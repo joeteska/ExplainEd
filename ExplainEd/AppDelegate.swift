@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 FirebaseUser.observeUserProfile(user!.uid) { userProfile in
                     FirebaseUser.currentUserProfile = userProfile
                 }
-                let controller = storyboard.instantiateViewController(withIdentifier: "InitialViewController") as! InitialViewController
+                let controller = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! UITabBarController
                 self.window?.rootViewController = controller
                 self.window?.makeKeyAndVisible()
             } else {
