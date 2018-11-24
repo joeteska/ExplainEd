@@ -15,6 +15,9 @@
 		685D64A321A261F000B90D1A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 685D64A221A261F000B90D1A /* GoogleService-Info.plist */; };
 		685D64A621A26B0500B90D1A /* FirebaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685D64A521A26B0500B90D1A /* FirebaseUser.swift */; };
 		685D64A821A26BC600B90D1A /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685D64A721A26BC600B90D1A /* UserProfile.swift */; };
+		686A60E521A8F87D0024B045 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686A60E421A8F87D0024B045 /* SidebarView.swift */; };
+		686A60E721A8F8AE0024B045 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686A60E621A8F8AE0024B045 /* ViewController.swift */; };
+		686A60E921A8F8C80024B045 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686A60E821A8F8C80024B045 /* EditProfileVC.swift */; };
 		6899E96621A2975D0089E7D6 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6899E96521A2975D0089E7D6 /* AboutViewController.swift */; };
 		6899E96821A297D20089E7D6 /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6899E96721A297D20089E7D6 /* ErrorAlert.swift */; };
 		6899E96A21A2981F0089E7D6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6899E96921A2981F0089E7D6 /* UIColor.swift */; };
@@ -61,6 +64,9 @@
 		685D64A221A261F000B90D1A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		685D64A521A26B0500B90D1A /* FirebaseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUser.swift; sourceTree = "<group>"; };
 		685D64A721A26BC600B90D1A /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		686A60E421A8F87D0024B045 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		686A60E621A8F8AE0024B045 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		686A60E821A8F8C80024B045 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		6899E96521A2975D0089E7D6 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		6899E96721A297D20089E7D6 /* ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
 		6899E96921A2981F0089E7D6 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -151,6 +157,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		686A60E321A8F8460024B045 /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				686A60E421A8F87D0024B045 /* SidebarView.swift */,
+				686A60E621A8F8AE0024B045 /* ViewController.swift */,
+				686A60E821A8F8C80024B045 /* EditProfileVC.swift */,
+			);
+			path = SideBar;
+			sourceTree = "<group>";
+		};
 		B83489320D92FB26E1E1A86F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +206,7 @@
 				685D64A421A26AEA00B90D1A /* Extensions */,
 				685D649721A2606500B90D1A /* Login */,
 				685D649E21A260D600B90D1A /* Onboarding */,
+				686A60E321A8F8460024B045 /* SideBar */,
 				685D64A121A2617D00B90D1A /* Storyboards */,
 				C3B5108B215208C800594809 /* FirstViewController.swift */,
 				C3B5108D215208C800594809 /* SecondViewController.swift */,
@@ -467,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				686A60E721A8F8AE0024B045 /* ViewController.swift in Sources */,
 				685D649B21A2609600B90D1A /* SignupViewController.swift in Sources */,
 				6899E96821A297D20089E7D6 /* ErrorAlert.swift in Sources */,
 				685D649D21A260BD00B90D1A /* InitialViewController.swift in Sources */,
@@ -476,9 +494,11 @@
 				685D64A021A260F600B90D1A /* OnboardingViewController.swift in Sources */,
 				C3B5108A215208C800594809 /* AppDelegate.swift in Sources */,
 				C3B510BA2152099700594809 /* ThirdViewController.swift in Sources */,
+				686A60E521A8F87D0024B045 /* SidebarView.swift in Sources */,
 				6899E96A21A2981F0089E7D6 /* UIColor.swift in Sources */,
 				685D649921A2608400B90D1A /* LoginViewController.swift in Sources */,
 				C3B5108C215208C800594809 /* FirstViewController.swift in Sources */,
+				686A60E921A8F8C80024B045 /* EditProfileVC.swift in Sources */,
 				685D64A621A26B0500B90D1A /* FirebaseUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
