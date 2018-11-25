@@ -9,12 +9,14 @@
 import Foundation
 import UIKit
 import Firebase
+import SwiftyButton
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var loginButton: UIButton!
+
+    @IBOutlet var signupButton: PressableButton!
     @IBOutlet var backButton: UIButton!
     
     var activityView:UIActivityIndicatorView!
@@ -23,13 +25,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        signupButton.colors = .init(
+            button: UIColor(red: 85/255, green: 105/255, blue: 255/255, alpha: 1),
+            shadow: UIColor(red: 165/255, green: 176/255, blue: 255/255, alpha: 1)
+        )
+        
+        signupButton.disabledColors = .init(
+            button: UIColor(red: 85/255, green: 105/255, blue: 255/255, alpha: 1),
+            shadow: UIColor(red: 165/255, green: 176/255, blue: 255/255, alpha: 1)
+        )
         setLoginButton(enabled: false)
-        loginButton.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
+        signupButton.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
 
         activityView = UIActivityIndicatorView(style: .gray)
         activityView.color = UIColor.gray
         activityView.frame = CGRect(x: 0, y: 0, width: 50.0, height: 50.0)
-        activityView.center = loginButton.center
+        activityView.center = signupButton.center
         
         emailTextField.keyboardType = .emailAddress
         emailTextField.delegate = self
@@ -53,11 +65,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func setLoginButton(enabled:Bool) {
         if enabled {
-            loginButton.alpha = 1.0
-            loginButton.isEnabled = true
+            signupButton.alpha = 1.0
+            signupButton.isEnabled = true
         } else {
-            loginButton.alpha = 0.5
-            loginButton.isEnabled = false
+            signupButton.alpha = 0.5
+            signupButton.isEnabled = false
         }
     }
     
@@ -77,7 +89,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         guard let pass = passwordTextField.text else { return }
         
         setLoginButton(enabled: false)
-        loginButton.setTitle("", for: .normal)
+        signupButton.setTitle("", for: .normal)
         activityView.startAnimating()
         
         Auth.auth().signIn(withEmail: email, password: pass) { user, error in
@@ -95,7 +107,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.present(alert, animated: true, completion: nil)
         
         setLoginButton(enabled: true)
-        loginButton.setTitle("Login", for: .normal)
+        signupButton.setTitle("Login", for: .normal)
         activityView.stopAnimating()
     }
 }

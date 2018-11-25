@@ -17,6 +17,8 @@ target 'ExplainEd' do
    pod 'JGProgressHUD'
    pod 'SwiftyJSON'
 
+   pod 'SwiftyButton'
+
 
   target 'ExplainEdTests' do
     inherit! :search_paths

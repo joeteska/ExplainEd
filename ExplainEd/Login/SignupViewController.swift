@@ -9,19 +9,30 @@
 import Foundation
 import UIKit
 import Firebase
+import SwiftyButton
 
 class  SignupViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var confirmPasswordTextField: UITextField!
-    @IBOutlet var signupButton: UIButton!
+    @IBOutlet var signupButton: PressableButton!
+    
     @IBOutlet var backButton: UIButton!
     
     var activityView:UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        signupButton.colors = .init(
+            button: UIColor(red: 85/255, green: 105/255, blue: 255/255, alpha: 1),
+            shadow: UIColor(red: 165/255, green: 176/255, blue: 255/255, alpha: 1)
+        )
+        signupButton.disabledColors = .init(
+            button: UIColor(red: 85/255, green: 105/255, blue: 255/255, alpha: 1),
+            shadow: UIColor(red: 165/255, green: 176/255, blue: 255/255, alpha: 1)
+        )
         
         signupButton.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
         

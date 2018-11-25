@@ -194,25 +194,27 @@
                                     <constraint firstAttribute="height" constant="791" id="kKo-0I-eCt"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLH-iC-oRe">
-                                <rect key="frame" x="53" y="453" width="269" height="117"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLH-iC-oRe" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="53" y="453" width="269" height="112"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="117" id="6SD-ks-Ozr"/>
+                                    <constraint firstAttribute="height" constant="112" id="6SD-ks-Ozr"/>
                                 </constraints>
-                                <state key="normal" image="login-button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="tintColor" red="0.99215686270000003" green="0.59607843140000005" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="login"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="nUQ-Tj-CNI" kind="show" id="p5j-tu-jlE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWI-5t-1dL">
-                                <rect key="frame" x="48" y="587" width="279" height="117"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="117" id="9cc-58-0lS"/>
-                                    <constraint firstAttribute="width" constant="279" id="vQB-9G-tgY"/>
-                                </constraints>
-                                <state key="normal" image="Signup"/>
-                                <connections>
-                                    <segue destination="Agp-3Y-8MQ" kind="show" id="aIs-SG-iIS"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cube" translatesAutoresizingMaskIntoConstraints="NO" id="aoE-2c-8ut">
@@ -237,29 +239,57 @@
                                     <color key="titleColor" red="0.99215686274509807" green="0.59607843137254901" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxB-6b-BaE" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="53" y="591" width="269" height="112"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="tai-lR-I3I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="tintColor" red="0.99215686270000003" green="0.59607843140000005" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="signup"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Agp-3Y-8MQ" kind="show" id="Akh-bO-bep"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.11372549019607843" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tLH-iC-oRe" firstAttribute="leading" secondItem="c7g-tX-J5x" secondAttribute="leading" constant="53" id="Cue-Vg-BYf"/>
-                            <constraint firstItem="Wrx-mE-hJi" firstAttribute="centerX" secondItem="kWI-5t-1dL" secondAttribute="centerX" id="F1i-Of-kMk"/>
                             <constraint firstItem="aoE-2c-8ut" firstAttribute="centerX" secondItem="BV5-wD-wMR" secondAttribute="centerX" id="HhV-mi-xqR"/>
                             <constraint firstItem="Wrx-mE-hJi" firstAttribute="centerX" secondItem="tLH-iC-oRe" secondAttribute="centerX" id="J30-fm-k22"/>
+                            <constraint firstItem="htj-M6-okv" firstAttribute="bottom" secondItem="c7g-tX-J5x" secondAttribute="bottom" id="Qb7-az-9yl"/>
+                            <constraint firstItem="tLH-iC-oRe" firstAttribute="trailing" secondItem="wxB-6b-BaE" secondAttribute="trailing" id="RwZ-tG-wmB"/>
                             <constraint firstItem="BV5-wD-wMR" firstAttribute="top" secondItem="c7g-tX-J5x" secondAttribute="top" constant="40" id="USz-LF-the"/>
+                            <constraint firstItem="Wrx-mE-hJi" firstAttribute="top" secondItem="wxB-6b-BaE" secondAttribute="bottom" constant="17" id="VbP-OY-LHB"/>
                             <constraint firstItem="aoE-2c-8ut" firstAttribute="leading" secondItem="c7g-tX-J5x" secondAttribute="leading" constant="100" id="WIo-jc-e14"/>
-                            <constraint firstItem="htj-M6-okv" firstAttribute="centerX" secondItem="kWI-5t-1dL" secondAttribute="centerX" id="XWZ-dr-p1Y"/>
                             <constraint firstItem="BV5-wD-wMR" firstAttribute="leading" secondItem="Y4e-7a-8K9" secondAttribute="leading" id="XzB-5E-yJt"/>
                             <constraint firstItem="c7g-tX-J5x" firstAttribute="bottom" secondItem="Wrx-mE-hJi" secondAttribute="bottom" constant="14" id="blF-Cr-RQb"/>
+                            <constraint firstItem="tLH-iC-oRe" firstAttribute="leading" secondItem="wxB-6b-BaE" secondAttribute="leading" id="eXz-JH-hoK"/>
                             <constraint firstItem="Wrx-mE-hJi" firstAttribute="centerX" secondItem="aoE-2c-8ut" secondAttribute="centerX" id="feV-Ae-gdO"/>
-                            <constraint firstItem="Wrx-mE-hJi" firstAttribute="top" secondItem="kWI-5t-1dL" secondAttribute="bottom" constant="16" id="g4u-Z8-ODR"/>
-                            <constraint firstItem="htj-M6-okv" firstAttribute="top" secondItem="kWI-5t-1dL" secondAttribute="bottom" constant="41" id="hRW-mK-cRr"/>
-                            <constraint firstItem="kWI-5t-1dL" firstAttribute="top" secondItem="tLH-iC-oRe" secondAttribute="bottom" constant="17" id="laq-0V-Fm8"/>
+                            <constraint firstItem="htj-M6-okv" firstAttribute="centerX" secondItem="Wrx-mE-hJi" secondAttribute="centerX" id="iRq-3C-Cts"/>
                             <constraint firstItem="Wrx-mE-hJi" firstAttribute="leading" secondItem="c7g-tX-J5x" secondAttribute="leading" constant="25" id="mLW-K3-37o"/>
+                            <constraint firstItem="wxB-6b-BaE" firstAttribute="top" secondItem="tLH-iC-oRe" secondAttribute="bottom" constant="26" id="rUa-E6-Hm7"/>
                             <constraint firstAttribute="trailing" secondItem="BV5-wD-wMR" secondAttribute="trailing" id="uMs-Jm-sfl"/>
                             <constraint firstItem="htj-M6-okv" firstAttribute="leading" secondItem="c7g-tX-J5x" secondAttribute="leading" constant="71" id="yUH-YA-Mvk"/>
                             <constraint firstItem="aoE-2c-8ut" firstAttribute="top" secondItem="c7g-tX-J5x" secondAttribute="top" constant="151" id="yaL-RO-p1k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c7g-tX-J5x"/>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="tLH-iC-oRe" id="Ga7-dd-XSg"/>
+                        <outlet property="signupButton" destination="wxB-6b-BaE" id="FGW-PE-TIR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82N-B2-EhK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -282,12 +312,24 @@
                                     <constraint firstAttribute="height" constant="203" id="0dV-aY-5yW"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHR-wt-EsX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHR-wt-EsX" customClass="PressableButton" customModule="SwiftyButton">
                                 <rect key="frame" x="100" y="580" width="175" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="nLN-R3-kp2"/>
                                 </constraints>
-                                <state key="normal" image="login-button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="sign up"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qr1-RA-EWf">
                                 <rect key="frame" x="49" y="446" width="275" height="30"/>
@@ -334,8 +376,8 @@
                     <connections>
                         <outlet property="backButton" destination="EWe-aw-o5z" id="OJb-iO-BTH"/>
                         <outlet property="emailTextField" destination="qr1-RA-EWf" id="pQ2-y2-2Y8"/>
-                        <outlet property="loginButton" destination="NHR-wt-EsX" id="BA0-ZV-3pB"/>
                         <outlet property="passwordTextField" destination="rDI-HE-w5g" id="JxK-Qv-5mo"/>
+                        <outlet property="signupButton" destination="NHR-wt-EsX" id="TxO-K1-IBO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KeO-rU-o6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -362,12 +404,24 @@
                                     <constraint firstAttribute="height" constant="203" id="pvJ-Nh-fHw"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSF-xz-52B">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSF-xz-52B" customClass="PressableButton" customModule="SwiftyButton">
                                 <rect key="frame" x="101" y="625" width="175" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="Phr-wB-bb3"/>
                                 </constraints>
-                                <state key="normal" image="Signup"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="sign up"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x7S-7R-k36">
                                 <rect key="frame" x="50" y="430" width="275" height="30"/>
@@ -426,7 +480,7 @@
                         <outlet property="confirmPasswordTextField" destination="x7l-Af-0iS" id="6n7-pK-4sd"/>
                         <outlet property="emailTextField" destination="x7S-7R-k36" id="KJv-07-7xj"/>
                         <outlet property="passwordTextField" destination="T3b-JD-bAv" id="iFy-f4-ImS"/>
-                        <outlet property="signupButton" destination="sSF-xz-52B" id="bNS-f8-HaI"/>
+                        <outlet property="signupButton" destination="sSF-xz-52B" id="p5I-py-Zx5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgJ-4G-uwu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -568,7 +622,6 @@
         <image name="Cube" width="173" height="200"/>
         <image name="Facebook_Background" width="1125" height="2610"/>
         <image name="Facebook_Title" width="441" height="179"/>
-        <image name="Signup" width="270" height="110"/>
         <image name="White_Background" width="997" height="2645"/>
         <image name="about_button" width="811" height="332"/>
         <image name="back_Button" width="33" height="33"/>
@@ -578,7 +631,6 @@
         <image name="icons8-instagram-50" width="25" height="25"/>
         <image name="icons8-snapchat-50" width="25" height="25"/>
         <image name="instagram_title" width="882" height="359"/>
-        <image name="login-button" width="270" height="110"/>
         <image name="profile_pic" width="39" height="45"/>
         <image name="purple_background" width="1125" height="2610"/>
         <image name="snap_background" width="1125" height="2610"/>
