@@ -1,31 +1,32 @@
 //
-//  ViewController.swift
+//  ViewController1.swift
 //  ExplainEd
 //
-//  Created by Robert Brennan on 11/23/18.
+//  Created by Robert Brennan on 11/25/18.
 //  Copyright © 2018 Josef Teska. All rights reserved.
 //
 
 import UIKit
 import SwiftyButton
 
-class ViewController: UIViewController {
+class ViewController1: UIViewController {
     
     var sidebarView: SidebarView!
     var blackScreen: UIView!
     
     @IBOutlet var profileButton: UIButton!
-    @IBOutlet var instaButton: PressableButton!
+    @IBOutlet var facebookButton: PressableButton!
     @IBOutlet var aboutButton: PressableButton!
     @IBOutlet var userInfoButton: PressableButton!
     @IBOutlet var businessButton: PressableButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.tabBar.isHidden = false
-        instaButton.colors = .init(
-            button: UIColor(red: 96/255, green: 82/255, blue: 197/255, alpha: 1),
-            shadow: UIColor(red: 65/255, green: 49/255, blue: 177/255, alpha: 1)
+        
+        facebookButton.colors = .init(
+            button: UIColor(red: 55/255, green: 152/255, blue: 255/255, alpha: 1),
+            shadow: UIColor(red: 0/255, green: 136/255, blue: 235/255, alpha: 1)
         )
         aboutButton.colors = .init(
             button: UIColor(red: 255/255, green: 156/255, blue: 116/255, alpha: 1),
@@ -76,7 +77,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: SidebarViewDelegate {
+extension ViewController1: SidebarViewDelegate {
     func sidebarDidSelectRow(row: Row) {
         blackScreen.isHidden=true
         blackScreen.frame=self.view.bounds

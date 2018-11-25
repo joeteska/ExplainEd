@@ -91,6 +91,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4d-SQ-5dk" customClass="PressableButton" customModule="SwiftyButton">
                                 <rect key="frame" x="44" y="87" width="287" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="117" id="f6M-CC-k19"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Instagram">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -150,7 +153,7 @@
         <!--Facebook-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="ExplainEd" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="ViewController1" customModule="ExplainEd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,30 +164,66 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="White_Background" translatesAutoresizingMaskIntoConstraints="NO" id="46d-ca-Dlb">
                                 <rect key="frame" x="23" y="52" width="328" height="760"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMb-2d-EsW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMb-2d-EsW" customClass="PressableButton" customModule="SwiftyButton">
                                 <rect key="frame" x="44" y="243" width="287" height="117"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="287" id="4P7-c0-kp2"/>
                                     <constraint firstAttribute="height" constant="117" id="YYr-Kq-ujg"/>
                                 </constraints>
-                                <state key="normal" image="about_button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="about"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDD-DE-fJp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDD-DE-fJp" customClass="PressableButton" customModule="SwiftyButton">
                                 <rect key="frame" x="44" y="399" width="287" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="117" id="Iw6-mh-6rJ"/>
+                                    <constraint firstAttribute="width" constant="287" id="v2s-gJ-6pV"/>
                                 </constraints>
-                                <state key="normal" image="user_Interface"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="user information"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lE-S0-qac">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lE-S0-qac" customClass="PressableButton" customModule="SwiftyButton">
                                 <rect key="frame" x="44" y="554" width="287" height="117"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="287" id="TJY-4g-wqH"/>
                                     <constraint firstAttribute="height" constant="117" id="USb-Ji-EQ1"/>
                                 </constraints>
-                                <state key="normal" image="business_button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="business"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook_Title" translatesAutoresizingMaskIntoConstraints="NO" id="2vx-t9-7ao">
-                                <rect key="frame" x="34" y="79" width="307" height="118"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IP6-4J-Fg5">
                                 <rect key="frame" x="16" y="39" width="28" height="32"/>
                                 <constraints>
@@ -192,10 +231,32 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="profile_pic"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDA-9g-IeO" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="44" y="87" width="287" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="117" id="iP5-a4-VgF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IP6-4J-Fg5" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="topMargin" constant="-5" id="02c-aw-HCN"/>
+                            <constraint firstItem="lDA-9g-IeO" firstAttribute="leading" secondItem="SMb-2d-EsW" secondAttribute="leading" id="2Ty-xe-X7m"/>
                             <constraint firstItem="2vD-GJ-hjF" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="39x-XN-PSS"/>
                             <constraint firstAttribute="bottom" secondItem="2vD-GJ-hjF" secondAttribute="bottom" id="4Y5-pI-hTP"/>
                             <constraint firstItem="SMb-2d-EsW" firstAttribute="leading" secondItem="hDD-DE-fJp" secondAttribute="leading" id="ACu-cB-hJP"/>
@@ -205,21 +266,18 @@
                             <constraint firstItem="46d-ca-Dlb" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="23" id="T2Z-rd-HV7"/>
                             <constraint firstItem="2vD-GJ-hjF" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="Toe-84-VhR"/>
                             <constraint firstItem="IP6-4J-Fg5" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="U0x-29-M7Q"/>
-                            <constraint firstItem="46d-ca-Dlb" firstAttribute="centerX" secondItem="2vx-t9-7ao" secondAttribute="centerX" id="WzF-8a-YOd"/>
+                            <constraint firstItem="lDA-9g-IeO" firstAttribute="trailing" secondItem="SMb-2d-EsW" secondAttribute="trailing" id="WVC-6h-t3N"/>
+                            <constraint firstItem="lDA-9g-IeO" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="43" id="awV-ly-VvA"/>
                             <constraint firstItem="hDD-DE-fJp" firstAttribute="trailing" secondItem="3lE-S0-qac" secondAttribute="trailing" id="bc2-fd-A4v"/>
-                            <constraint firstItem="SMb-2d-EsW" firstAttribute="top" secondItem="2vx-t9-7ao" secondAttribute="bottom" constant="46" id="bfn-Bh-jFx"/>
                             <constraint firstItem="2vD-GJ-hjF" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="dHs-jv-uec"/>
                             <constraint firstItem="46d-ca-Dlb" firstAttribute="centerX" secondItem="2vD-GJ-hjF" secondAttribute="centerX" id="eCn-o4-VCP"/>
                             <constraint firstItem="2vD-GJ-hjF" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="g9b-VE-gN5"/>
                             <constraint firstItem="2vD-GJ-hjF" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="gc3-nY-GGs"/>
-                            <constraint firstItem="2vx-t9-7ao" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="34" id="hkm-lb-baO"/>
                             <constraint firstItem="46d-ca-Dlb" firstAttribute="bottom" secondItem="2vD-GJ-hjF" secondAttribute="bottom" id="hzd-bu-X5l"/>
-                            <constraint firstItem="2vx-t9-7ao" firstAttribute="top" secondItem="IP6-4J-Fg5" secondAttribute="bottom" constant="8" symbolic="YES" id="iPL-B8-280"/>
                             <constraint firstAttribute="bottom" secondItem="2vD-GJ-hjF" secondAttribute="bottom" id="jcc-QK-UTe"/>
                             <constraint firstItem="3lE-S0-qac" firstAttribute="top" secondItem="hDD-DE-fJp" secondAttribute="bottom" constant="38" id="mNt-0H-t6N"/>
                             <constraint firstItem="SMb-2d-EsW" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="44" id="oPf-Eq-fUx"/>
                             <constraint firstItem="46d-ca-Dlb" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="8" id="sRd-9p-Kbr"/>
-                            <constraint firstItem="2vx-t9-7ao" firstAttribute="centerX" secondItem="SMb-2d-EsW" secondAttribute="centerX" id="tIg-HR-1HL"/>
                             <constraint firstItem="hDD-DE-fJp" firstAttribute="top" secondItem="SMb-2d-EsW" secondAttribute="bottom" constant="39" id="ubZ-Uh-ynv"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="3lE-S0-qac" secondAttribute="bottom" constant="58" id="xFc-bJ-q2r"/>
                             <constraint firstItem="2vD-GJ-hjF" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="xr5-He-sL8"/>
@@ -228,6 +286,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Facebook" image="icons8-facebook-50" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" id="Ks8-3j-i0a"/>
+                    <connections>
+                        <outlet property="aboutButton" destination="SMb-2d-EsW" id="SKN-ux-41A"/>
+                        <outlet property="businessButton" destination="3lE-S0-qac" id="yu9-hs-cKV"/>
+                        <outlet property="facebookButton" destination="lDA-9g-IeO" id="l4l-mR-HJG"/>
+                        <outlet property="profileButton" destination="IP6-4J-Fg5" id="XSO-3R-h4G"/>
+                        <outlet property="userInfoButton" destination="hDD-DE-fJp" id="DvY-AI-Goq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -594,7 +659,7 @@
         <!--Snapchat-->
         <scene sceneID="VbC-iE-aqt">
             <objects>
-                <viewController id="Sex-Kx-XNM" sceneMemberID="viewController">
+                <viewController id="Sex-Kx-XNM" customClass="ViewController2" customModule="ExplainEd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Oy-Ag-7Qv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -605,30 +670,66 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="White_Background" translatesAutoresizingMaskIntoConstraints="NO" id="gLB-wD-GTH">
                                 <rect key="frame" x="23" y="52" width="328" height="760"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ya4-TZ-Sa3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ya4-TZ-Sa3" customClass="PressableButton" customModule="SwiftyButton">
                                 <rect key="frame" x="44" y="243" width="287" height="117"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="287" id="TKR-fi-TVA"/>
                                     <constraint firstAttribute="height" constant="117" id="xeJ-Tt-PmX"/>
                                 </constraints>
-                                <state key="normal" image="about_button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="about"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjH-r9-kge">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjH-r9-kge" customClass="PressableButton" customModule="SwiftyButton">
                                 <rect key="frame" x="44" y="399" width="287" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="117" id="SZA-ek-3AL"/>
+                                    <constraint firstAttribute="width" constant="287" id="krc-Y7-t86"/>
                                 </constraints>
-                                <state key="normal" image="user_Interface"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="user information"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5q-IM-F5e">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5q-IM-F5e" customClass="PressableButton" customModule="SwiftyButton">
                                 <rect key="frame" x="44" y="554" width="287" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="117" id="aSC-hM-zkz"/>
+                                    <constraint firstAttribute="width" constant="287" id="tWs-La-DcR"/>
                                 </constraints>
-                                <state key="normal" image="business_button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="business"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snapchat_title" translatesAutoresizingMaskIntoConstraints="NO" id="eaY-Cy-zBJ">
-                                <rect key="frame" x="34" y="79" width="307" height="118"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gx-a7-BO6">
                                 <rect key="frame" x="16" y="39" width="28" height="32"/>
                                 <constraints>
@@ -636,35 +737,61 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="profile_pic"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUq-9e-Pl9" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="44" y="87" width="287" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="117" id="IgW-k5-BdT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Snapchat">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gLB-wD-GTH" firstAttribute="leading" secondItem="wCS-63-cGB" secondAttribute="leading" constant="23" id="2Wc-6j-h1o"/>
-                            <constraint firstItem="eaY-Cy-zBJ" firstAttribute="centerX" secondItem="1Oy-Ag-7Qv" secondAttribute="centerX" id="5wm-tg-6CX"/>
                             <constraint firstItem="8Gx-a7-BO6" firstAttribute="top" secondItem="1Oy-Ag-7Qv" secondAttribute="topMargin" constant="-5" id="654-HM-Xjt"/>
                             <constraint firstItem="wCS-63-cGB" firstAttribute="bottom" secondItem="a5q-IM-F5e" secondAttribute="bottom" constant="58" id="7ia-s3-I1K"/>
                             <constraint firstItem="pjH-r9-kge" firstAttribute="top" secondItem="ya4-TZ-Sa3" secondAttribute="bottom" constant="39" id="A4A-cu-XcX"/>
                             <constraint firstItem="wCS-63-cGB" firstAttribute="trailing" secondItem="8Gx-a7-BO6" secondAttribute="trailing" constant="331" id="EX4-8Z-XR3"/>
                             <constraint firstItem="ya4-TZ-Sa3" firstAttribute="leading" secondItem="wCS-63-cGB" secondAttribute="leading" constant="44" id="HAd-fR-6Tr"/>
-                            <constraint firstItem="eaY-Cy-zBJ" firstAttribute="centerX" secondItem="yYH-tC-Uyf" secondAttribute="centerX" id="Hxw-sf-Q5V"/>
-                            <constraint firstItem="eaY-Cy-zBJ" firstAttribute="centerX" secondItem="ya4-TZ-Sa3" secondAttribute="centerX" id="RTY-VR-gQq"/>
                             <constraint firstAttribute="bottom" secondItem="gLB-wD-GTH" secondAttribute="bottom" id="SjK-L4-1X5"/>
-                            <constraint firstItem="eaY-Cy-zBJ" firstAttribute="top" secondItem="8Gx-a7-BO6" secondAttribute="bottom" constant="8" symbolic="YES" id="Uoa-1S-qJ4"/>
                             <constraint firstItem="gLB-wD-GTH" firstAttribute="bottom" secondItem="yYH-tC-Uyf" secondAttribute="bottom" id="ZKb-hi-p5p"/>
                             <constraint firstItem="gLB-wD-GTH" firstAttribute="top" secondItem="wCS-63-cGB" secondAttribute="top" constant="8" id="csX-53-VVJ"/>
                             <constraint firstItem="ya4-TZ-Sa3" firstAttribute="leading" secondItem="pjH-r9-kge" secondAttribute="leading" id="eO9-L0-wtz"/>
-                            <constraint firstItem="eaY-Cy-zBJ" firstAttribute="leading" secondItem="wCS-63-cGB" secondAttribute="leading" constant="34" id="exR-LR-vR7"/>
-                            <constraint firstItem="eaY-Cy-zBJ" firstAttribute="centerX" secondItem="gLB-wD-GTH" secondAttribute="centerX" id="geK-AF-lfs"/>
+                            <constraint firstItem="rUq-9e-Pl9" firstAttribute="centerX" secondItem="yYH-tC-Uyf" secondAttribute="centerX" id="hQB-0y-E1J"/>
+                            <constraint firstItem="rUq-9e-Pl9" firstAttribute="trailing" secondItem="ya4-TZ-Sa3" secondAttribute="trailing" id="hlr-WA-TtQ"/>
                             <constraint firstItem="a5q-IM-F5e" firstAttribute="top" secondItem="pjH-r9-kge" secondAttribute="bottom" constant="38" id="ib9-QL-yHx"/>
                             <constraint firstItem="ya4-TZ-Sa3" firstAttribute="trailing" secondItem="pjH-r9-kge" secondAttribute="trailing" id="jlA-uB-Yxc"/>
-                            <constraint firstItem="ya4-TZ-Sa3" firstAttribute="top" secondItem="eaY-Cy-zBJ" secondAttribute="bottom" constant="46" id="ko5-BP-fXG"/>
                             <constraint firstItem="pjH-r9-kge" firstAttribute="leading" secondItem="a5q-IM-F5e" secondAttribute="leading" id="nrQ-4L-FEo"/>
                             <constraint firstItem="pjH-r9-kge" firstAttribute="trailing" secondItem="a5q-IM-F5e" secondAttribute="trailing" id="tR2-uc-zeU"/>
                             <constraint firstItem="8Gx-a7-BO6" firstAttribute="leading" secondItem="1Oy-Ag-7Qv" secondAttribute="leadingMargin" id="ucR-51-DHG"/>
+                            <constraint firstItem="rUq-9e-Pl9" firstAttribute="top" secondItem="wCS-63-cGB" secondAttribute="top" constant="43" id="udJ-4a-0cU"/>
+                            <constraint firstItem="rUq-9e-Pl9" firstAttribute="centerX" secondItem="gLB-wD-GTH" secondAttribute="centerX" id="w7C-Qr-eRx"/>
+                            <constraint firstItem="rUq-9e-Pl9" firstAttribute="leading" secondItem="ya4-TZ-Sa3" secondAttribute="leading" id="zl3-0p-5Vn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wCS-63-cGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Snapchat" image="icons8-snapchat-50" id="8u7-9r-D2j"/>
+                    <connections>
+                        <outlet property="aboutButton" destination="ya4-TZ-Sa3" id="C3y-VA-FOs"/>
+                        <outlet property="businessButton" destination="a5q-IM-F5e" id="cuk-pb-ff0"/>
+                        <outlet property="profileButton" destination="8Gx-a7-BO6" id="UQh-FF-PfS"/>
+                        <outlet property="snapchatButton" destination="rUq-9e-Pl9" id="Qbg-yj-ynN"/>
+                        <outlet property="userInfoButton" destination="pjH-r9-kge" id="GbJ-No-gSx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpT-ZE-GNU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -674,11 +801,8 @@
     <resources>
         <image name="Cube" width="173" height="200"/>
         <image name="Facebook_Background" width="1125" height="2610"/>
-        <image name="Facebook_Title" width="441" height="179"/>
         <image name="White_Background" width="997" height="2645"/>
-        <image name="about_button" width="811" height="332"/>
         <image name="back_Button" width="33" height="33"/>
-        <image name="business_button" width="811" height="347"/>
         <image name="icons8-about-50" width="25" height="25"/>
         <image name="icons8-facebook-50" width="25" height="25"/>
         <image name="icons8-instagram-50" width="25" height="25"/>
@@ -686,7 +810,5 @@
         <image name="profile_pic" width="39" height="45"/>
         <image name="purple_background" width="1125" height="2610"/>
         <image name="snap_background" width="1125" height="2610"/>
-        <image name="snapchat_title" width="882" height="359"/>
-        <image name="user_Interface" width="811" height="333"/>
     </resources>
 </document>
