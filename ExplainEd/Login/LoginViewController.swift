@@ -26,15 +26,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         
+        
         signupButton.colors = .init(
-            button: UIColor(red: 85/255, green: 105/255, blue: 255/255, alpha: 1),
-            shadow: UIColor(red: 165/255, green: 176/255, blue: 255/255, alpha: 1)
+            button: UIColor(red: 255/255, green: 85/255, blue: 84/255, alpha: 1),
+            shadow: UIColor(red: 255/255, green: 151/255, blue: 151/255, alpha: 1)
         )
         
         signupButton.disabledColors = .init(
-            button: UIColor(red: 85/255, green: 105/255, blue: 255/255, alpha: 1),
-            shadow: UIColor(red: 165/255, green: 176/255, blue: 255/255, alpha: 1)
+            button: UIColor(red: 255/255, green: 85/255, blue: 84/255, alpha: 1),
+            shadow: UIColor(red: 255/255, green: 151/255, blue: 151/255, alpha: 1)
         )
+        
         setLoginButton(enabled: false)
         signupButton.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
 

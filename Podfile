@@ -16,7 +16,7 @@ target 'ExplainEd' do
 
    pod 'JGProgressHUD'
    pod 'SwiftyJSON'
-
+   pod 'PasswordTextField'
    pod 'SwiftyButton'
 
 

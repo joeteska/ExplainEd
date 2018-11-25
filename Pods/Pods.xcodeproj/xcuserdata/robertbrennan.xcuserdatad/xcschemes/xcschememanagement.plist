@@ -95,40 +95,54 @@
 			<key>orderHint</key>
 			<integer>11</integer>
 		</dict>
-		<key>Pods-ExplainEd.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>15</integer>
-		</dict>
-		<key>Pods-ExplainEdTests.xcscheme</key>
+		<key>PasswordTextField-PasswordTextField.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>16</integer>
 		</dict>
-		<key>Pods-ExplainEdUITests.xcscheme</key>
+		<key>PasswordTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>15</integer>
+		</dict>
+		<key>Pods-ExplainEd.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>17</integer>
 		</dict>
-		<key>SwiftyButton.xcscheme</key>
+		<key>Pods-ExplainEdTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>18</integer>
 		</dict>
-		<key>SwiftyJSON.xcscheme</key>
+		<key>Pods-ExplainEdUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>19</integer>
+		</dict>
+		<key>SwiftyButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>20</integer>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>21</integer>
 		</dict>
 		<key>leveldb-library.xcscheme</key>
 		<dict>
