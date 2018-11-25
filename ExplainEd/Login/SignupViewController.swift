@@ -38,9 +38,11 @@ class  SignupViewController: UIViewController, UITextFieldDelegate{
         
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        confirmPasswordTextField.delegate = self
         
         emailTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        confirmPasswordTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         
         activityView = UIActivityIndicatorView(style: .gray)
         activityView.color = UIColor.gray
@@ -60,7 +62,7 @@ class  SignupViewController: UIViewController, UITextFieldDelegate{
         let email = emailTextField.text
         let password = passwordTextField.text
         let confirmpassword = confirmPasswordTextField.text
-        let formFilled = email != nil && email != "" && password != nil && password != "" && confirmpassword == password && password == confirmpassword
+        let formFilled = email != nil && email != "" && password != nil && password != "" && confirmpassword != nil && confirmpassword != "" && confirmpassword == password
         setSignupButton(enabled: formFilled)
     }
     

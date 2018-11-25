@@ -24,30 +24,62 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="White_Background" translatesAutoresizingMaskIntoConstraints="NO" id="ecv-h3-QY1">
                                 <rect key="frame" x="23" y="52" width="328" height="760"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="instagram_title" translatesAutoresizingMaskIntoConstraints="NO" id="fnE-Gh-Lwl">
-                                <rect key="frame" x="33" y="79" width="307" height="118"/>
-                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqu-9v-vVY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqu-9v-vVY" customClass="PressableButton" customModule="SwiftyButton">
                                 <rect key="frame" x="44" y="243" width="287" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="117" id="oHH-Z9-1fP"/>
                                 </constraints>
-                                <state key="normal" image="about_button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="about"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWr-K4-I4d">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWr-K4-I4d" customClass="PressableButton" customModule="SwiftyButton">
                                 <rect key="frame" x="44" y="399" width="287" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="117" id="dvm-HQ-s37"/>
                                 </constraints>
-                                <state key="normal" image="user_Interface"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="user information"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUy-Bi-cWT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUy-Bi-cWT" customClass="PressableButton" customModule="SwiftyButton">
                                 <rect key="frame" x="44" y="554" width="287" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="117" id="asI-ut-CWa"/>
                                 </constraints>
-                                <state key="normal" image="business_button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="business"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIq-Ec-g7O">
                                 <rect key="frame" x="16" y="39" width="28" height="32"/>
@@ -57,17 +89,36 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="profile_pic"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4d-SQ-5dk" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="44" y="87" width="287" height="117"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Instagram">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fnE-Gh-Lwl" firstAttribute="leading" secondItem="ysB-k1-31e" secondAttribute="leading" constant="33" id="0eD-TE-kav"/>
                             <constraint firstItem="aWr-K4-I4d" firstAttribute="top" secondItem="Bqu-9v-vVY" secondAttribute="bottom" constant="39" id="5x8-W1-dQw"/>
-                            <constraint firstItem="ecv-h3-QY1" firstAttribute="centerX" secondItem="fnE-Gh-Lwl" secondAttribute="centerX" id="CBq-cz-B1X"/>
                             <constraint firstItem="Bqu-9v-vVY" firstAttribute="leading" secondItem="aWr-K4-I4d" secondAttribute="leading" id="HlZ-bT-5IK"/>
                             <constraint firstItem="ecv-h3-QY1" firstAttribute="centerX" secondItem="LiU-Q8-YGk" secondAttribute="centerX" id="IEl-MX-ZCw"/>
                             <constraint firstItem="ecv-h3-QY1" firstAttribute="bottom" secondItem="LiU-Q8-YGk" secondAttribute="bottom" id="JvQ-lW-oQK"/>
                             <constraint firstItem="Bqu-9v-vVY" firstAttribute="leading" secondItem="ysB-k1-31e" secondAttribute="leading" constant="44" id="Kws-JD-Z9J"/>
                             <constraint firstItem="Bqu-9v-vVY" firstAttribute="trailing" secondItem="aWr-K4-I4d" secondAttribute="trailing" id="MOa-Lf-zm6"/>
+                            <constraint firstItem="Bqu-9v-vVY" firstAttribute="top" secondItem="h4d-SQ-5dk" secondAttribute="bottom" constant="39" id="MPB-LQ-CkS"/>
+                            <constraint firstItem="h4d-SQ-5dk" firstAttribute="top" secondItem="ysB-k1-31e" secondAttribute="top" constant="43" id="ON6-cF-PQE"/>
+                            <constraint firstItem="h4d-SQ-5dk" firstAttribute="trailing" secondItem="Bqu-9v-vVY" secondAttribute="trailing" id="OvG-L1-niC"/>
                             <constraint firstAttribute="bottom" secondItem="ecv-h3-QY1" secondAttribute="bottom" id="Tzb-BP-oVa"/>
                             <constraint firstItem="iIq-Ec-g7O" firstAttribute="top" secondItem="yud-67-ii0" secondAttribute="topMargin" constant="-5" id="VNV-aj-xvX"/>
                             <constraint firstItem="ysB-k1-31e" firstAttribute="bottom" secondItem="iUy-Bi-cWT" secondAttribute="bottom" constant="58" id="WMH-Pr-ECL"/>
@@ -78,16 +129,18 @@
                             <constraint firstItem="ecv-h3-QY1" firstAttribute="leading" secondItem="ysB-k1-31e" secondAttribute="leading" constant="23" id="gI9-Hw-NEs"/>
                             <constraint firstItem="ecv-h3-QY1" firstAttribute="centerX" secondItem="yud-67-ii0" secondAttribute="centerX" id="hKG-BA-WP2"/>
                             <constraint firstItem="ecv-h3-QY1" firstAttribute="top" secondItem="ysB-k1-31e" secondAttribute="top" constant="8" id="hLv-eE-QLd"/>
-                            <constraint firstItem="Bqu-9v-vVY" firstAttribute="top" secondItem="fnE-Gh-Lwl" secondAttribute="bottom" constant="46" id="jv4-Dc-slB"/>
-                            <constraint firstItem="fnE-Gh-Lwl" firstAttribute="top" secondItem="iIq-Ec-g7O" secondAttribute="bottom" constant="8" symbolic="YES" id="k6c-5N-Ner"/>
+                            <constraint firstItem="h4d-SQ-5dk" firstAttribute="leading" secondItem="Bqu-9v-vVY" secondAttribute="leading" id="iFC-6O-FqX"/>
                             <constraint firstItem="iUy-Bi-cWT" firstAttribute="top" secondItem="aWr-K4-I4d" secondAttribute="bottom" constant="38" id="nwV-Je-Nfx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ysB-k1-31e"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Instagram" image="icons8-instagram-50" id="9tf-52-nmg"/>
                     <connections>
-                        <outlet property="instaButton" destination="fnE-Gh-Lwl" id="lsk-aB-m78"/>
+                        <outlet property="aboutButton" destination="Bqu-9v-vVY" id="K6r-4a-Xom"/>
+                        <outlet property="businessButton" destination="iUy-Bi-cWT" id="089-cl-PA1"/>
+                        <outlet property="instaButton" destination="h4d-SQ-5dk" id="xvD-GD-cs9"/>
                         <outlet property="profileButton" destination="iIq-Ec-g7O" id="OHH-Zf-b0T"/>
+                        <outlet property="userInfoButton" destination="aWr-K4-I4d" id="dS3-tU-M3A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1h-af-Uio" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -343,7 +396,7 @@
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWe-aw-o5z">
                                 <rect key="frame" x="35" y="130" width="33" height="33"/>
@@ -435,14 +488,14 @@
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T3b-JD-bAv">
                                 <rect key="frame" x="51" y="491" width="275" height="30"/>
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZ9-6K-4Z1">
                                 <rect key="frame" x="28" y="130" width="40" height="40"/>
@@ -630,7 +683,6 @@
         <image name="icons8-facebook-50" width="25" height="25"/>
         <image name="icons8-instagram-50" width="25" height="25"/>
         <image name="icons8-snapchat-50" width="25" height="25"/>
-        <image name="instagram_title" width="882" height="359"/>
         <image name="profile_pic" width="39" height="45"/>
         <image name="purple_background" width="1125" height="2610"/>
         <image name="snap_background" width="1125" height="2610"/>

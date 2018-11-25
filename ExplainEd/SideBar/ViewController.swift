@@ -7,21 +7,38 @@
 //
 
 import UIKit
+import SwiftyButton
 
 class ViewController: UIViewController {
     
     var sidebarView: SidebarView!
     var blackScreen: UIView!
-    @IBOutlet var profileButton: UIButton!
     
-    @IBOutlet var instaButton: UIImageView!
+    @IBOutlet var profileButton: UIButton!
+    @IBOutlet var instaButton: PressableButton!
+    @IBOutlet var aboutButton: PressableButton!
+    @IBOutlet var userInfoButton: PressableButton!
+    @IBOutlet var businessButton: PressableButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        self.title = "Home"
-//        self.navigationController?.navigationBar.shadowImage = UIImage();
-//        let btnMenu = UIBarButtonItem(image: #imageLiteral(resourceName: "profile_pic"), style: .plain, target: self, action: #selector(btnMenuAction))
-//        self.navigationItem.leftBarButtonItem = btnMenu
+        
+        instaButton.colors = .init(
+            button: UIColor(red: 96/255, green: 82/255, blue: 197/255, alpha: 1),
+            shadow: UIColor(red: 65/255, green: 49/255, blue: 177/255, alpha: 1)
+        )
+        aboutButton.colors = .init(
+            button: UIColor(red: 255/255, green: 156/255, blue: 116/255, alpha: 1),
+            shadow: UIColor(red: 255/255, green: 220/255, blue: 202/255, alpha: 1)
+        )
+        userInfoButton.colors = .init(
+            button: UIColor(red: 255/255, green: 117/255, blue: 126/255, alpha: 1),
+            shadow: UIColor(red: 255/255, green: 213/255, blue: 214/255, alpha: 1)
+        )
+        businessButton.colors = .init(
+            button: UIColor(red: 158/255, green: 226/255, blue: 254/255, alpha: 1),
+            shadow: UIColor(red: 223/255, green: 247/255, blue: 255/255, alpha: 1)
+        )
         
         profileButton.addTarget(self, action: #selector(btnMenuAction), for: .touchUpInside)
         view.addSubview(profileButton)
