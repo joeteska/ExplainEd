@@ -45,7 +45,7 @@ class SidebarView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor=UIColor(red: 54/255, green: 55/255, blue: 56/255, alpha: 1.0)
+        self.backgroundColor=UIColor(red: 255/255, green: 14/255, blue: 29/255, alpha: 1.0)
         self.clipsToBounds=true
         
         titleArr = ["John Doe", "Messages", "Contact", "Settings", "History", "Help", "Sign Out"]
@@ -74,7 +74,7 @@ class SidebarView: UIView, UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             cell.backgroundColor=UIColor(red: 77/255, green: 77/255, blue: 77/255, alpha: 1.0)
             let cellImg: UIImageView!
-            cellImg = UIImageView(frame: CGRect(x: 15, y: 10, width: 80, height: 80))
+            cellImg = UIImageView(frame: CGRect(x: 15, y: 10, width: 118, height: 135))
             cellImg.layer.cornerRadius = 40
             cellImg.layer.masksToBounds=true
             cellImg.contentMode = .scaleAspectFill
