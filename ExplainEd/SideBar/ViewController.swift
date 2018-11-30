@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         self.view.isUserInteractionEnabled=true
         view.addSubview(sidebarView)
         blackScreen=UIView(frame: self.view.bounds)
-        blackScreen.backgroundColor=UIColor(white: 0, alpha: 0.5)
+        blackScreen.backgroundColor=UIColor(white: 0, alpha: 0.2)
         blackScreen.isHidden=true
         view.addSubview(blackScreen)
         blackScreen.layer.zPosition=100
@@ -94,32 +94,27 @@ extension ViewController: SidebarViewDelegate {
             self.tabBarController?.tabBar.isHidden = false
             let vc=EditProfileVC()
             self.navigationController?.pushViewController(vc, animated: true)
-            print("Messages")
+            print("Contact")
         case .contact:
             self.tabBarController?.tabBar.isHidden = false
             let vc=EditProfileVC()
             self.navigationController?.pushViewController(vc, animated: true)
-            print("Contact")
+            print("Settings")
         case .settings:
             self.tabBarController?.tabBar.isHidden = false
             let vc=EditProfileVC()
             self.navigationController?.pushViewController(vc, animated: true)
-            print("Settings")
+            print("Help")
         case .history:
             self.tabBarController?.tabBar.isHidden = false
             let vc=EditProfileVC()
             self.navigationController?.pushViewController(vc, animated: true)
-            print("History")
+            print("Invite")
         case .help:
             self.tabBarController?.tabBar.isHidden = false
             let vc=EditProfileVC()
             self.navigationController?.pushViewController(vc, animated: true)
-            print("Help")
-        case .signOut:
-            self.tabBarController?.tabBar.isHidden = false
-            let vc=EditProfileVC()
-            self.navigationController?.pushViewController(vc, animated: true)
-            print("Sign out")
+            print("Signout")
         case .none:
             break
             //        default:  //Default will never be executed
