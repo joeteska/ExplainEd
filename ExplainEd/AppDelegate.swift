@@ -11,6 +11,7 @@ import Firebase
 import FirebaseInstanceID
 import UserNotifications
 import FBSDKLoginKit
+import GoogleSignIn
 
 //Global Color Themes
 //let primaryColor = Theme1.SECONDARY_COLOR1
@@ -23,7 +24,7 @@ import FBSDKLoginKit
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, GIDSignInDelegate {
     
     var window: UIWindow?
     var enableAllOrientation = false
@@ -38,6 +39,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
 //        chatsController.title = "Chats"
+        
+        
+        //Initialize Gmail Login
+        GIDSignIn.sharedInstance().clientID = "926447812121-kktg58pq81f9ootsq0k3pabglgqubs3u.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().delegate = self
+
+        
         
         //Configure Firebase
         FirebaseApp.configure()
@@ -123,6 +131,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         // This notification is not auth related, developer should handle it.
     }
+    
+    
+    ///Google Sign in Setup
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url as URL?,
+                                                 sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                                                 annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
+              withError error: Error!) {
+        if let error = error {
+            print("\(error.localizedDescription)")
+        } else {
+            // Perform any operations on signed in user here.
+            guard let authentication = user.authentication else { return }
+            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                           accessToken: authentication.accessToken)
+            
+            Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+                if let error = error {
+                    // ...
+                    return
+                }
+                // User is signed in
+                // ...
+            }
+        }
+    }
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
+              withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
+        // ...
+    }
+
 }
 
 

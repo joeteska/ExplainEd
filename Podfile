@@ -18,7 +18,8 @@ target 'ExplainEd' do
    pod 'SwiftyJSON'
    pod 'PasswordTextField'
    pod 'SwiftyButton'
-
+   pod 'GoogleSignIn'
+   pod 'MiniTabBar'
 
   target 'ExplainEdTests' do
     inherit! :search_paths
