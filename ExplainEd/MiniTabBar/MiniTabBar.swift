@@ -1,9 +1,9 @@
 //
-//  MiniTabBar.swift
-//  Pods
+//  MiniTabBarItem.swift
+//  ExplainEd
 //
-//  Created by Dylan Marriott on 11/01/17.
-//
+//  Created by Robert Brennan on 12/3/18.
+//  Copyright © 2018 Josef Teska. All rights reserved.
 //
 
 import Foundation
@@ -99,7 +99,7 @@ public class MiniTabBar: UIView {
             itemView.frame = CGRect(x: x, y: 0, width: itemWidth, height: frame.size.height)
         }
     }
-
+    
     @objc func itemTapped(_ gesture: UITapGestureRecognizer) {
         let itemView = gesture.view as! MiniTabBarItemView
         let selectedIndex = self.itemViews.index(of: itemView)!
@@ -123,4 +123,3 @@ public class MiniTabBar: UIView {
         self.delegate?.tabSelected(selectedIndex)
     }
 }
-

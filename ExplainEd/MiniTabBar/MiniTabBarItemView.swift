@@ -1,9 +1,9 @@
 //
 //  MiniTabBarItemView.swift
-//  Pods
+//  ExplainEd
 //
-//  Created by Dylan Marriott on 12/01/17.
-//
+//  Created by Robert Brennan on 12/3/18.
+//  Copyright © 2018 Josef Teska. All rights reserved.
 //
 
 import Foundation
@@ -68,7 +68,7 @@ class MiniTabBarItemView: UIView {
                                         y: self.frame.height / 2 + self.item.offset.vertical)
         } else {
             titleLabel.frame = CGRect(x: 0, y: self.frame.height, width: self.frame.width, height: 14)
-            iconView.frame = CGRect(x: self.frame.width / 2 - 13, y: 12, width: 26, height: 20)
+            iconView.frame = CGRect(x: self.frame.width / 2 - 13, y: 12, width: 26, height: 27)
         }
     }
     
@@ -93,12 +93,14 @@ class MiniTabBarItemView: UIView {
              TEXT
              */
             UIView.animate(withDuration: 0.2, delay: 0, options: UIView.AnimationOptions(), animations: {
-                self.titleLabel.frame.origin.y = 28
+                self.titleLabel.frame.origin.y = 34
                 self.titleLabel.alpha = 1.0
             }, completion: { finished in
                 UIView.animate(withDuration: 0.2, delay: 0.5, options: UIView.AnimationOptions(), animations: {
                     self.titleLabel.frame.origin.y = self.frame.size.height
                     self.titleLabel.alpha = 0.0
+//                    self.titleLabel.frame.origin.y = 38
+//                    self.titleLabel.alpha = 1.0
                 }, completion: { finished in
                 })
             })

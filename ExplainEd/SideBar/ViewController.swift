@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyButton
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MiniTabBarDelegate {
     
     var sidebarView: SidebarView!
     var blackScreen: UIView!
@@ -20,9 +20,19 @@ class ViewController: UIViewController {
     @IBOutlet var userInfoButton: PressableButton!
     @IBOutlet var businessButton: PressableButton!
     
+    
+    var items = [MiniTabBarItem]()
+    //...
+    
+    
+    // Delegate protocol:
+    func tabSelected(_ index: Int) {
+        print("Selected tab: ", index)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.tabBar.isHidden = false
+        self.tabBarController?.tabBar.isHidden = true
         instaButton.colors = .init(
             button: UIColor(red: 96/255, green: 82/255, blue: 197/255, alpha: 1),
             shadow: UIColor(red: 65/255, green: 49/255, blue: 177/255, alpha: 1)
@@ -39,6 +49,39 @@ class ViewController: UIViewController {
             button: UIColor(red: 158/255, green: 226/255, blue: 254/255, alpha: 1),
             shadow: UIColor(red: 223/255, green: 247/255, blue: 255/255, alpha: 1)
         )
+        
+        let image1 = UIImage(named:"icons8-facebook-50")
+        let image2 = UIImage(named:"icons8-instagram-50")
+        let image3 = UIImage(named:"icons8-snapchat-50")
+        let image4 = UIImage(named:"icons8-about-50")
+        
+        let customButton = UIButton()
+        customButton.setImage(image1, for: .normal)
+//        customButton.backgroundColor = UIColor.orange
+        customButton.tintColor = UIColor.blue
+        customButton.frame.size = CGSize(width: 40, height: 50)
+        let customItem = MiniTabBarItem(customView: customButton,
+                                        offset: UIOffset(horizontal: 0,
+                                                         vertical: 0))
+        customItem.selectable = false
+//        items.append(customItem)
+        items.append(MiniTabBarItem(title: "Facebook", icon: image1!))
+        items.append(MiniTabBarItem(title: "Instagram", icon: image2!))
+        items.append(MiniTabBarItem(title: "Snapchat", icon: image3!))
+        items.append(MiniTabBarItem(title: "More", icon: image4!))
+
+        let tabBar = MiniTabBar(items: items)
+
+        tabBar.translatesAutoresizingMaskIntoConstraints = false
+        tabBar.delegate = self
+        self.view.addSubview(tabBar)
+            
+        let constraints = [
+            tabBar.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor),
+            tabBar.widthAnchor.constraint(equalTo: view.widthAnchor),
+            tabBar.heightAnchor.constraint(equalToConstant: 50),
+            ]
+        NSLayoutConstraint.activate(constraints)
         
         profileButton.addTarget(self, action: #selector(btnMenuAction), for: .touchUpInside)
         view.addSubview(profileButton)
