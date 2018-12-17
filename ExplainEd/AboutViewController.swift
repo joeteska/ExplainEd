@@ -12,13 +12,11 @@ import Firebase
 
 class AboutViewController: UIViewController{
     
-    @IBOutlet var logoutButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        logoutButton.addTarget(self, action: #selector(handleLogout), for: .touchUpInside)
-        view.addSubview(logoutButton)
+
     }
     
     @objc func handleSignOutButtonTapped() {
