@@ -8,7 +8,7 @@
 
 import UIKit
 import SwiftyButton
-
+import Firebase
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var accountInfo: UIStackView!
@@ -18,6 +18,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var postsInfo: UIStackView!
     @IBOutlet var privacyInfo: UIStackView!
     
+    @IBOutlet var scrollView: UIScrollView!
     var sidebarView: SidebarView!
     var blackScreen: UIView!
     let tableView : UITableView = {
@@ -33,15 +34,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var userInfoButton: PressableButton!
     @IBOutlet var businessButton: PressableButton!
     
-    var scrollView: UIScrollView = {
-        let view = UIScrollView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor.blue
-        view.alwaysBounceVertical = true
-        view.isScrollEnabled = false
-        return view
-    }()
-    
+//    var scrollView: UIScrollView = {
+//        let view = UIScrollView()
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//        view.backgroundColor = UIColor.blue
+//        view.alwaysBounceVertical = true
+//        view.isScrollEnabled = false
+//        return view
+//    }()
+//
     
     // Delegate protocol:
     func tabSelected(_ index: Int) {
@@ -76,8 +77,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         userInfoButton.addTarget(self, action: #selector(userInfoPressed), for: .touchUpInside)
         self.view.backgroundColor = UIColor.blue
 
-        scrollView.isScrollEnabled = false
-        scrollView.showsHorizontalScrollIndicator = false
+//        scrollView.isScrollEnabled = false
+//        scrollView.showsHorizontalScrollIndicator = false
 
 //        tableView = UITableView(frame: view.bounds, style: .plain)
 //        tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
@@ -116,7 +117,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        tableView.dataSource = self
 //        tableView.reloadData()
 //        view.addSubview(tableView)
-        
+        businessButton.addTarget(self, action:#selector(handleSignOutButtonTapped), for: .touchUpInside)
         profileButton.addTarget(self, action: #selector(btnMenuAction), for: .touchUpInside)
         view.addSubview(profileButton)
         sidebarView=SidebarView(frame: CGRect(x: 0, y: 0, width: 0, height: self.view.frame.height))
@@ -138,13 +139,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         navigationInfo.isHidden = true
         postsInfo.isHidden = true
         privacyInfo.isHidden = true
+        scrollView.delegate = self
+        scrollView.isScrollEnabled = false
+
     }
 
+    @objc func handleSignOutButtonTapped() {
+        let signOutAction = UIAlertAction(title: "Sign Out", style: .destructive) { (action) in
+            do {
+                try Auth.auth().signOut()
+                let loginViewController = LoginViewController()
+                let loginNavigationController = UINavigationController(rootViewController: loginViewController)
+                self.present(loginNavigationController, animated: true, completion: nil)
+            } catch let err {
+                print("Failed to sign out with error", err)
+                ErrorAlert.showAlert(on: self, style: .alert, title: "Sign Out Error", message: err.localizedDescription)
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        ErrorAlert.showAlert(on: self, style: .actionSheet, title: nil, message: nil, actions: [signOutAction, cancelAction], completion: nil)
+    }
     
     @objc func userInfoPressed() {
         
         if accountInfo.isHidden == false{
-            
+            scrollView.delegate = self
             instaButton.isHidden = false
             aboutButton.isHidden = false
             businessButton.isHidden = false
@@ -152,8 +171,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             navigationInfo.isHidden = true
             postsInfo.isHidden = true
             privacyInfo.isHidden = true
+            scrollView.isScrollEnabled = false
         }
         else{
+            scrollView.isScrollEnabled = true
             businessButton.isHidden = true
             instaButton.isHidden = true
             aboutButton.isHidden = true

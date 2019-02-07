@@ -13,9 +13,11 @@ import SwiftyButton
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet var emailButton: PressableButton!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
 
+    @IBOutlet var passwordButton: PressableButton!
     @IBOutlet var signupButton: PressableButton!
     @IBOutlet var backButton: UIButton!
     
@@ -25,7 +27,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        emailButton.colors = .init(
+            button: UIColor(red: 241/255, green: 241/255, blue: 241/255, alpha: 1),
+            shadow: UIColor(red: 226/255, green: 226/255, blue: 226/255, alpha: 1)
+        )
+        passwordButton.colors = .init(
+            button: UIColor(red: 241/255, green: 241/255, blue: 241/255, alpha: 1),
+            shadow: UIColor(red: 226/255, green: 226/255, blue: 226/255, alpha: 1)
+        )
         
         signupButton.colors = .init(
             button: UIColor(red: 255/255, green: 85/255, blue: 84/255, alpha: 1),
